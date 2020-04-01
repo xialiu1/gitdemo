@@ -21,3 +21,11 @@ for char in string:                 #对于string中每一个字符char
         else:                       #如果不匹配，则将标志位置为1，并跳出循环
             flag = 1
             break
+#输出
+if flag == 0:               #如果经过循环后，标志位为0，说明在遍历字符串过程中没有遇到左右括号不匹配的情况
+    if len(L) == 0:     #如果此时堆栈为空，那么说明左右括号正好匹配，输出yes
+        print("Valid Input!")
+    else:                   #否则，左右括号不匹配，输出no
+        print("Invalid Input!")
+else:                       #如果flag不为0，则左右括号不匹配，输出no
+    print("Invalid Input!")
